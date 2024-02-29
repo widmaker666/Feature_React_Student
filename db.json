@@ -1,0 +1,84 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "John",
+      "lastName": "Doe",
+      "dateOfBirth": "1990-05-15",
+      "gender": "male"
+    },
+    {
+      "id": 2,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Alice",
+      "lastName": "Smith",
+      "dateOfBirth": "1992-08-20",
+      "gender": "female"
+    },
+    {
+      "id": 3,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "dateOfBirth": "1991-03-10",
+      "gender": "male"
+    },
+    {
+      "id": 4,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "dateOfBirth": "1993-12-05",
+      "gender": "female"
+    },
+    {
+      "id": 5,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Michael",
+      "lastName": "Wilson",
+      "dateOfBirth": "1989-09-25",
+      "gender": "male"
+    },
+    {
+      "id": 6,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Emma",
+      "lastName": "Taylor",
+      "dateOfBirth": "1994-04-18",
+      "gender": "female"
+    },
+    {
+      "id": 7,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "James",
+      "lastName": "Martinez",
+      "dateOfBirth": "1995-11-30",
+      "gender": "male"
+    },
+    {
+      "id": 8,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Olivia",
+      "lastName": "Hernandez",
+      "dateOfBirth": "1990-07-12",
+      "gender": "female"
+    },
+    {
+      "id": 9,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "William",
+      "lastName": "Young",
+      "dateOfBirth": "1993-01-22",
+      "gender": "male"
+    },
+    {
+      "id": 10,
+      "photo": "https://via.placeholder.com/150",
+      "firstName": "Sophia",
+      "lastName": "Garcia",
+      "dateOfBirth": "1992-06-08",
+      "gender": "female"
+    }
+  ]
+}
