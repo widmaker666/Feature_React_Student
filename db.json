@@ -2,7 +2,7 @@
   "students": [
     {
       "id": 1,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "John",
       "lastName": "Doe",
       "dateOfBirth": "1990-05-15",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Alice",
       "lastName": "Smith",
       "dateOfBirth": "1992-08-20",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Bob",
       "lastName": "Johnson",
       "dateOfBirth": "1991-03-10",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Emily",
       "lastName": "Brown",
       "dateOfBirth": "1993-12-05",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Michael",
       "lastName": "Wilson",
       "dateOfBirth": "1989-09-25",
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Emma",
       "lastName": "Taylor",
       "dateOfBirth": "1994-04-18",
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "James",
       "lastName": "Martinez",
       "dateOfBirth": "1995-11-30",
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Olivia",
       "lastName": "Hernandez",
       "dateOfBirth": "1990-07-12",
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "William",
       "lastName": "Young",
       "dateOfBirth": "1993-01-22",
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "photo": "https://via.placeholder.com/150",
+      "photo": "https://img.freepik.com/premium-vector/graduate-student-avatar-student-student-icon-flat-design-style-education-graduation-isolated-student-icon-white-background-vector-illustration-web-application-printing_153097-1566.jpg",
       "firstName": "Sophia",
       "lastName": "Garcia",
       "dateOfBirth": "1992-06-08",

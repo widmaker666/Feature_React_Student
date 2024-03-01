@@ -1,2 +1,9 @@
 @import "./style/settings";
 
+//* PAGES //
+@import "./style/pages/panelAdmin.scss";
+
+//* COMPONENTS //
+@import "./style/components/displayStudents.scss";
+@import "./style/components/EditBtn.scss";
+@import "./style/components/DeleteBtn.scss";
