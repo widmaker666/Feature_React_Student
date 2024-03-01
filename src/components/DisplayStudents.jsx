@@ -5,7 +5,7 @@ import CreateBtn from "./CreateBtn";
 
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
-  const [numToShow, setNumToShow] = useState(5); // État pour suivre le nombre de divs d'étudiant à afficher
+  const [numToShow, setNumToShow] = useState(5);
 
   const [sortStates, setSortStates] = useState({
     firstName: false,

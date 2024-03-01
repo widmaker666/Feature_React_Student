@@ -4,8 +4,12 @@ import FromStudent from "../components/FromStudent";
 function CreateStudent() {
   return (
     <>
-      <h1>ici un composant formulaire pour ajouter un nouveau students</h1>
-      <FromStudent />
+      <main>
+        <h1>Add A New Student</h1>
+        <div className="container-main">
+          <FromStudent />
+        </div>
+      </main>
     </>
   );
 }
