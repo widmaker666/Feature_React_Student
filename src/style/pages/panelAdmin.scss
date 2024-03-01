@@ -6,6 +6,11 @@ main {
   & h1 {
     text-align: center;
     font-family: $font-title;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    letter-spacing: 2.3px;
+    text-shadow: 1.5px 1.5px 0px rgba(255,255,255,1);
+
   }
 
   & .container-main {
