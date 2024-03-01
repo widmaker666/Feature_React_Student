@@ -74,26 +74,25 @@ function DisplayStudents({ allStudents }) {
       </div>
       <CreateBtn />
       <div className="container">
-        <div>
-          {sortedStudents.slice(0, numToShow).map((student) => (
-            <div className="student-container" key={student.id}>
-              <div className="container-img">
-                <img src={student.photo} alt={student.firstName} />
-              </div>
-              <form className="content-student">
-                <p>First Name: {student.firstName}</p>
-                <p>Last Name: {student.lastName}</p>
-                <p>Date of Birth: {student.dateOfBirth}</p>
-                <p>Gender: {student.gender}</p>
-              </form>
-              <div className="container-btn">
-                <EditBtn />
-                <DeleteBtn />
-              </div>
+        {sortedStudents.slice(0, numToShow).map((student) => (
+          <div className="student-container" key={student.id}>
+            <div className="container-img">
+              <img src={student.photo} alt={student.firstName} />
             </div>
-          ))}
-        </div>
+            <form className="content-student">
+              <p>First Name: {student.firstName}</p>
+              <p>Last Name: {student.lastName}</p>
+              <p>Date of Birth: {student.dateOfBirth}</p>
+              <p>Gender: {student.gender}</p>
+            </form>
+            <div className="container-btn">
+              <EditBtn />
+              <DeleteBtn />
+            </div>
+          </div>
+        ))}
       </div>
+
       {numToShow < sortedStudents.length && (
         <button className="btn-showmore" onClick={handleShowMore}>
           Show More
