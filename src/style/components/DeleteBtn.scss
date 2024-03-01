@@ -1,9 +1,9 @@
 .delete-btn {
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   height: 35px;
   width: 80px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.61);
+  box-shadow: 4px 4px 0px 0px rgb(0, 0, 0);
   transition: 0.2s ease-in-out;
   font-family: $font-paragraph-reg;
   font-weight: 700;
@@ -14,5 +14,6 @@
   transform: scale(0.85);
   transition: 0.2s;
   cursor: pointer;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background: #ff001e;
+  box-shadow: 2.5px 2.5px 0px 0px rgb(255, 255, 255);
 }

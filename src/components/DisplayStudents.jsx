@@ -79,12 +79,12 @@ function DisplayStudents({ allStudents }) {
             <div className="container-img">
               <img src={student.photo} alt={student.firstName} />
             </div>
-            <form className="content-student">
+            <div className="content-student">
               <p>First Name: {student.firstName}</p>
               <p>Last Name: {student.lastName}</p>
               <p>Date of Birth: {student.dateOfBirth}</p>
               <p>Gender: {student.gender}</p>
-            </form>
+            </div>
             <div className="container-btn">
               <EditBtn />
               <DeleteBtn />

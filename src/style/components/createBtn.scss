@@ -4,16 +4,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
-  border: 1px solid black;
-  height: 35px;
-  width: 120px;
+  background: white;
+  border: 3px solid black;
+  height: 38px;
+  width: 150px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.61);
+  box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
   transition: 0.2s ease-in-out;
   font-family: $font-paragraph-reg;
-  font-weight: 700;
   letter-spacing: 1.8px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-transform: capitalize;
+
 }
 
 .btn-create:hover {
@@ -21,4 +24,6 @@
   transform: scale(1.08);
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.936);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 8px 8px 0px -3px rgba(0, 0, 0, 1);
 }
