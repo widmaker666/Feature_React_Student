@@ -1,0 +1,24 @@
+.btn-create {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid black;
+  height: 35px;
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.61);
+  transition: 0.2s ease-in-out;
+  font-family: $font-paragraph-reg;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.btn-create:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.936);
+}
