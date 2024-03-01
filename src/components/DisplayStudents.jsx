@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EditBtn from "./EditBtn";
 import DeleteBtn from "./DeleteBtn";
+import CreateBtn from "./CreateBtn";
 
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
@@ -71,6 +72,7 @@ function DisplayStudents({ allStudents }) {
           Gender
         </h5>
       </div>
+      <CreateBtn />
       <div className="container">
         <div>
           {sortedStudents.slice(0, numToShow).map((student) => (
@@ -93,7 +95,9 @@ function DisplayStudents({ allStudents }) {
         </div>
       </div>
       {numToShow < sortedStudents.length && (
-        <button className="btn-showmore" onClick={handleShowMore}>Show More</button>
+        <button className="btn-showmore" onClick={handleShowMore}>
+          Show More
+        </button>
       )}
     </>
   );
