@@ -6,6 +6,7 @@ import CreateBtn from "../utils/CreateBtn";
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
   const [numToShow, setNumToShow] = useState(5);
+  const [searchTerm, setSearchTerm] = useState(""); // Ajout de l'état pour le terme de recherche
 
   const [sortStates, setSortStates] = useState({
     firstName: false,
@@ -37,13 +38,34 @@ function DisplayStudents({ allStudents }) {
     return sortStates[field] ? "sorted" : "";
   };
 
-  const sortedStudents = allStudents
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value); // Mettre à jour le terme de recherche lorsqu'il change
+  };
+
+  const filteredStudents = allStudents.filter((student) => {
+    return (
+      student.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      student.lastName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+
+  const sortedStudents = filteredStudents
     ?.slice()
     .sort((a, b) => a[sortBy]?.localeCompare(b[sortBy]));
 
   return (
     <>
       <h1>Students container for all students</h1>
+      <div className="search-container">
+        <label htmlFor="search">Search Bar</label>
+        <input
+          id="search"
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search by name..."
+        />
+      </div>
       <div className="sort-container">
         <h5
           className={getSortClass("firstName")}

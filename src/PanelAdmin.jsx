@@ -5,7 +5,7 @@ function PanelAdmin() {
   return (
     <main>
       <h1>Home page</h1>
-      <div className="container-main">
+      <div className="container-main">               
         <Students />
       </div>
     </main>
