@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 function ImageUploader({ onImageChange }) {
   const handleImageChange = (event) => {
@@ -18,6 +19,7 @@ function ImageUploader({ onImageChange }) {
 function FormStudent() {
   const [avatar, setAvatar] = useState("");
   const [values, setValues] = useState({
+    id: "",
     photo: "",
     firstName: "",
     lastName: "",
@@ -35,8 +37,10 @@ function FormStudent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const id = uuidv4();
+
     await axios
-      .post("http://localhost:3001/students", values)
+      .post("http://localhost:3001/students", { ...values, id })
       .then((res) => {
         console.log(res);
         navigate("/");
@@ -47,7 +51,9 @@ function FormStudent() {
   return (
     <>
       <form onSubmit={handleSubmit} className="form-add-student">
-        <div className="img">{avatar && <img src={avatar} alt="Avatar" />}</div>
+        <div className="img">
+          {avatar && <img src={avatar} alt="Avatar" required />}
+        </div>
         <div className="div-img">
           <ImageUploader onImageChange={handleAvatarChange} />
         </div>
@@ -57,6 +63,7 @@ function FormStudent() {
           <input
             type="text"
             id="firstName"
+            required
             onChange={(e) =>
               setValues({ ...values, firstName: e.target.value })
             }
@@ -69,6 +76,7 @@ function FormStudent() {
           <input
             type="text"
             id="lastName"
+            required
             onChange={(e) => setValues({ ...values, lastName: e.target.value })}
             placeholder="Krueger...."
           />
@@ -78,6 +86,7 @@ function FormStudent() {
           <label htmlFor="date-birth">Date of Birth</label>
           <input
             type="date"
+            required
             onChange={(e) =>
               setValues({ ...values, dateOfBirth: e.target.value })
             }
@@ -91,7 +100,10 @@ function FormStudent() {
             name="gender"
             id="gender"
             onChange={(e) => setValues({ ...values, gender: e.target.value })}
+            required 
           >
+            <option value="">Select gender</option>{" "}
+            {/* Option vide pour le placeholder */}
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
