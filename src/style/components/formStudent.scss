@@ -1,0 +1,151 @@
+input[type="file"] {
+  font-family: $font-paragraph-reg;
+  font-weight: 700;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  font-family: $font-paragraph-reg;
+  font-weight: 700;
+  width: 250px;
+  box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+  border: 2.5px solid black;
+  padding: 7px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  cursor: pointer;
+}
+input[type="file"]::-webkit-file-upload-button:active {
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+
+.back-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-paragraph-reg;
+  font-weight: 700;
+  background: white;
+  text-decoration: none;
+  color: black;
+  border: 2.5px solid black;
+  box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  transition: 0.3s ease-in-out;
+}
+.back-home:hover {
+  cursor: pointer;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.form-add-student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px 0;
+
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 20px;
+  height: 650px;
+  width: 500px;
+  max-width: 80%;
+  box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+
+  & .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      height: 100px;
+      width: 100px;
+      border: 3px solid black;
+      box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+      border-radius: 20px;
+      margin: 0;
+    }
+  }
+
+  & .div-fName,
+  .div-lName,
+  .div-birth,
+  .div-gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    & label {
+      font-family: $font-paragraph-reg;
+      font-weight: 700;
+    }
+
+    & input {
+      color: lightslategray;
+      padding-left: 8px;
+      border: 2.5px solid black;
+      box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+      border-radius: 10px;
+      height: 30px;
+      font-family: $font-paragraph-light;
+      width: auto;
+    }
+
+    & input:focus {
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      color: black;
+      font-weight: 700;
+    }
+
+    & select {
+      color: lightslategray;
+      padding-left: 8px;
+      border: 2.5px solid black;
+      box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+      border-radius: 10px;
+      height: 30px;
+      font-family: $font-paragraph-light;
+      width: auto;
+    }
+  }
+
+  & button[type="submit"] {
+    font-family: $font-paragraph-reg;
+    font-weight: 700;
+    background: white;
+
+    border: 2.5px solid black;
+    box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    transition: 0.3s ease-in-out;
+  }
+
+  & button[type="submit"]:hover {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    cursor: pointer;
+  }
+  & button[type="submit"]:active {
+    transform: scale(0.8);
+    transition: 0.2s;
+  }
+}

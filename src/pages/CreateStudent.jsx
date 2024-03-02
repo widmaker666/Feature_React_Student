@@ -1,5 +1,5 @@
 import React from "react";
-import FromStudent from "../components/FromStudent";
+import FormStudent from "../components/FormStudent";
 
 function CreateStudent() {
   return (
@@ -7,7 +7,7 @@ function CreateStudent() {
       <main>
         <h1>Add A New Student</h1>
         <div className="container-main">
-          <FromStudent />
+          <FormStudent/>
         </div>
       </main>
     </>

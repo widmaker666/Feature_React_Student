@@ -28,24 +28,22 @@ function FormStudent() {
           {avatar && (
             <img
               src={avatar}
-              alt="Avatar"
-              style={{ width: "100px", height: "100px" }}
+              alt="Avatar"              
             />
           )}
         </div>
-        <div className="div-img">
-          <label htmlFor="avatar-img">Avatar</label>
+        <div className="div-img">          
           <ImageUploader onImageChange={handleAvatarChange} />
         </div>
 
         <div className="div-fName">
           <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" value="Freddy" />
+          <input type="text" id="firstName" placeholder="Freddy...." />
         </div>
 
         <div className="div-lName">
           <label htmlFor="lastName">First Name</label>
-          <input type="text" id="lastName" value="Krueger" />
+          <input type="text" id="lastName" placeholder="Krueger...." />
         </div>
 
         <div className="div-birth">
@@ -61,9 +59,9 @@ function FormStudent() {
           </select>
         </div>
 
-        <button type="submit">Confirm</button>
+        <button type="submit">Confirmed</button>
       </form>
-      <Link to="/">Back</Link>
+      <Link className="back-home" to="/">Back</Link>
     </>
   );
 }
