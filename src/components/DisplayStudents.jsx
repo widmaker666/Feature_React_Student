@@ -6,8 +6,7 @@ import CreateBtn from "../utils/CreateBtn";
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
   const [numToShow, setNumToShow] = useState(5);
-  const [searchTerm, setSearchTerm] = useState(""); // Ajout de l'état pour le terme de recherche
-
+  const [searchTerm, setSearchTerm] = useState("");
   const [sortStates, setSortStates] = useState({
     firstName: false,
     lastName: false,
@@ -34,12 +33,19 @@ function DisplayStudents({ allStudents }) {
     setNumToShow((prevNum) => prevNum + 5);
   };
 
+  const handleNumToShowChange = (e) => {
+    const value = parseInt(e.target.value, 10);
+    if (!isNaN(value)) {
+      setNumToShow(value);
+    }
+  };
+
   const getSortClass = (field) => {
     return sortStates[field] ? "sorted" : "";
   };
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value); // Mettre à jour le terme de recherche lorsqu'il change
+    setSearchTerm(e.target.value);
   };
 
   const filteredStudents = allStudents.filter((student) => {
@@ -85,6 +91,16 @@ function DisplayStudents({ allStudents }) {
         >
           Gender
         </h5>
+      </div>
+      <div className="num-to-show-container">
+        <label htmlFor="numToShow">Number of Students to Show:</label>
+        <input
+          id="numToShow"
+          type="number"
+          value={numToShow}
+          onChange={handleNumToShowChange}
+          min="1"
+        />
       </div>
       <CreateBtn />
       <motion.div
