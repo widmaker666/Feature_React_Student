@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import EditBtn from "./EditBtn";
 import DeleteBtn from "./DeleteBtn";
 import CreateBtn from "./CreateBtn";
+import { useNavigate } from "react-router-dom";
+import ReadBtn from "./ReadBtn";
 
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
@@ -86,6 +88,7 @@ function DisplayStudents({ allStudents }) {
               <p>Gender: {student.gender}</p>
             </div>
             <div className="container-btn">
+              <ReadBtn id={student.id} />
               <EditBtn />
               <DeleteBtn />
             </div>
