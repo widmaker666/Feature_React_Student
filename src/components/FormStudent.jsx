@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 
 function ImageUploader({ onImageChange }) {
@@ -57,9 +58,22 @@ function FormStudent() {
       .catch((err) => console.log(err));
   };
 
+  const variants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, x: -100, transition: { duration: 0.5 } },
+  };
+
   return (
     <>
-      <form onSubmit={handleSubmit} className="form-add-student">
+      <motion.form
+        onSubmit={handleSubmit}
+        className="form-add-student"
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        variants={variants}
+      >
         <div className="img">
           {avatar && <img src={avatar} alt="Avatar" required />}
         </div>
@@ -67,7 +81,12 @@ function FormStudent() {
           <ImageUploader onImageChange={handleAvatarChange} />
         </div>
 
-        <div className="div-fName">
+        <motion.div
+          className="div-fName"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           <label htmlFor="firstName">First Name</label>
           <input
             type="text"
@@ -78,9 +97,14 @@ function FormStudent() {
             }
             placeholder="Freddy...."
           />
-        </div>
+        </motion.div>
 
-        <div className="div-lName">
+        <motion.div
+          className="div-lName"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
           <label htmlFor="lastName">Last Name</label>
           <input
             type="text"
@@ -89,9 +113,14 @@ function FormStudent() {
             onChange={(e) => setValues({ ...values, lastName: e.target.value })}
             placeholder="Krueger...."
           />
-        </div>
+        </motion.div>
 
-        <div className="div-email">
+        <motion.div
+          className="div-email"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+        >
           <label htmlFor="email">Email</label>
           <input
             type="text"
@@ -100,9 +129,14 @@ function FormStudent() {
             onChange={(e) => setValues({ ...values, email: e.target.value })}
             placeholder="freddy.krueger@gmail.com"
           />
-        </div>
+        </motion.div>
 
-        <div className="div-phone">
+        <motion.div
+          className="div-phone"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 }}
+        >
           <label htmlFor="phone">Phone</label>
           <input
             type="text"
@@ -111,9 +145,14 @@ function FormStudent() {
             onChange={(e) => setValues({ ...values, phone: e.target.value })}
             placeholder="+33123456789"
           />
-        </div>
+        </motion.div>
 
-        <div className="div-birth">
+        <motion.div
+          className="div-birth"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }}
+        >
           <label htmlFor="date-birth">Date of Birth</label>
           <input
             type="date"
@@ -123,9 +162,14 @@ function FormStudent() {
             }
             id="date-birth"
           />
-        </div>
+        </motion.div>
 
-        <div className="div-gender">
+        <motion.div
+          className="div-gender"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7 }}
+        >
           <label htmlFor="gender">Gender</label>
           <select
             name="gender"
@@ -138,10 +182,17 @@ function FormStudent() {
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-        </div>
+        </motion.div>
 
-        <button type="submit">Confirmed</button>
-      </form>
+        <motion.button
+          type="submit"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          Confirmed
+        </motion.button>
+      </motion.form>
       <Link className="back-home" to="/">
         Back
       </Link>

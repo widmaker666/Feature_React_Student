@@ -49,7 +49,7 @@ function Profile() {
   const handleDelete = async () => {
     try {
       await axios.delete(`http://localhost:3001/students/${id}`);
-      navigate.push("/");
+      navigate("/");
     } catch (error) {
       console.error("error deleting student", error);
     }

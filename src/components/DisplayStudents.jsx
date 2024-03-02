@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import CreateBtn from "../utils/CreateBtn";
 
 function DisplayStudents({ allStudents }) {
@@ -37,17 +37,9 @@ function DisplayStudents({ allStudents }) {
     return sortStates[field] ? "sorted" : "";
   };
 
-  const sortedStudents = allStudents?.slice().sort((a, b) => {
-    if (sortBy === "firstName") {
-      return a.firstName.localeCompare(b.firstName);
-    } else if (sortBy === "lastName") {
-      return a.lastName.localeCompare(b.lastName);
-    } else if (sortBy === "gender") {
-      return a.gender.localeCompare(b.gender);
-    } else {
-      return 0;
-    }
-  });
+  const sortedStudents = allStudents
+    ?.slice()
+    .sort((a, b) => a[sortBy]?.localeCompare(b[sortBy]));
 
   return (
     <>
@@ -73,11 +65,29 @@ function DisplayStudents({ allStudents }) {
         </h5>
       </div>
       <CreateBtn />
-      <div className="container">
-        {sortedStudents.slice(0, numToShow).map((student) => (
-          <div className="student-container" key={student.id}>
+      <motion.div
+        className="container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {sortedStudents?.slice(0, numToShow).map((student) => (
+          <motion.div
+            className="student-container"
+            key={student.id}
+            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+            whileTap={{ scale: 0.9, transition: { duration: 0.3 } }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="container-img">
-              <img src={student.photo} alt={student.firstName} />
+              <motion.img
+                src={student.photo}
+                alt={student.firstName}
+                whileHover={{ rotate: 10, transition: { duration: 0.3 } }}
+              />
             </div>
             <div className="content-student">
               <p>First Name: {student.firstName}</p>
@@ -87,11 +97,11 @@ function DisplayStudents({ allStudents }) {
             <div className="container-btn">
               <Link className="read-btn" to={`/student/${student.id}`}>
                 Read
-              </Link>              
+              </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {numToShow < sortedStudents.length && (
         <button className="btn-showmore" onClick={handleShowMore}>
