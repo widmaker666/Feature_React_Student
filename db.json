@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "John",
       "lastName": "Doe",
@@ -9,7 +9,7 @@
       "gender": "male"
     },
     {
-      "id": 2,
+      "id": "2",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Alice",
       "lastName": "Smith",
@@ -17,7 +17,7 @@
       "gender": "female"
     },
     {
-      "id": 3,
+      "id": "3",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Bob",
       "lastName": "Johnson",
@@ -25,7 +25,7 @@
       "gender": "male"
     },
     {
-      "id": 4,
+      "id": "4",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Emily",
       "lastName": "Brown",
@@ -33,7 +33,7 @@
       "gender": "female"
     },
     {
-      "id": 5,
+      "id": "5",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Michael",
       "lastName": "Wilson",
@@ -41,7 +41,7 @@
       "gender": "male"
     },
     {
-      "id": 6,
+      "id": "6",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Emma",
       "lastName": "Taylor",
@@ -49,7 +49,7 @@
       "gender": "female"
     },
     {
-      "id": 7,
+      "id": "7",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "James",
       "lastName": "Martinez",
@@ -57,7 +57,7 @@
       "gender": "male"
     },
     {
-      "id": 8,
+      "id": "8",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Olivia",
       "lastName": "Hernandez",
@@ -65,7 +65,7 @@
       "gender": "female"
     },
     {
-      "id": 9,
+      "id": "9",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "William",
       "lastName": "Young",
@@ -73,12 +73,20 @@
       "gender": "male"
     },
     {
-      "id": 10,
+      "id": "10",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
       "firstName": "Sophia",
       "lastName": "Garcia",
       "dateOfBirth": "1992-06-08",
       "gender": "female"
+    },
+    {
+      "id": "4bdc",
+      "photo": "blob:http://localhost:3000/9ea2487c-2f8a-4735-a4fe-cae63ae6313e",
+      "firstName": "ALEXANDRE",
+      "lastName": "Hontcharouk",
+      "dateOfBirth": "2024-03-01",
+      "gender": ""
     }
   ]
 }
