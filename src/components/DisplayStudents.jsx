@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import EditBtn from "./EditBtn";
-import DeleteBtn from "./DeleteBtn";
-import CreateBtn from "./CreateBtn";
-import { useNavigate } from "react-router-dom";
-import ReadBtn from "./ReadBtn";
+
+import { Link } from "react-router-dom";
+import CreateBtn from "../utils/CreateBtn";
 
 function DisplayStudents({ allStudents }) {
   const [sortBy, setSortBy] = useState(null);
@@ -84,13 +82,12 @@ function DisplayStudents({ allStudents }) {
             <div className="content-student">
               <p>First Name: {student.firstName}</p>
               <p>Last Name: {student.lastName}</p>
-              <p>Date of Birth: {student.dateOfBirth}</p>
               <p>Gender: {student.gender}</p>
             </div>
             <div className="container-btn">
-              <ReadBtn id={student.id} />
-              <EditBtn />
-              <DeleteBtn />
+              <Link className="read-btn" to={`/student/${student.id}`}>
+                Read
+              </Link>              
             </div>
           </div>
         ))}

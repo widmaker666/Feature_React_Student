@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DisplayStudents from "./DisplayStudents";
-
+import ReadStudent from "../pages/ReadStudent"; 
 
 function Students() {
   const [allStudents, setAllStudents] = useState([]);
@@ -19,7 +19,12 @@ function Students() {
     fetchStudents();
   }, []);
 
-  return <DisplayStudents allStudents={allStudents} />;
+  return (
+    <>
+      <DisplayStudents allStudents={allStudents} />
+      <ReadStudent allStudents={allStudents} />      
+    </>
+  );
 }
 
 export default Students;

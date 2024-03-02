@@ -26,6 +26,8 @@ function FormStudent() {
     lastName: "",
     dateOfBirth: "",
     gender: "",
+    email: "",
+    phone: "",
   });
 
   const handleAvatarChange = (image) => {
@@ -79,13 +81,35 @@ function FormStudent() {
         </div>
 
         <div className="div-lName">
-          <label htmlFor="lastName">First Name</label>
+          <label htmlFor="lastName">Last Name</label>
           <input
             type="text"
             id="lastName"
             required
             onChange={(e) => setValues({ ...values, lastName: e.target.value })}
             placeholder="Krueger...."
+          />
+        </div>
+
+        <div className="div-email">
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            required
+            onChange={(e) => setValues({ ...values, email: e.target.value })}
+            placeholder="freddy.krueger@gmail.com"
+          />
+        </div>
+
+        <div className="div-phone">
+          <label htmlFor="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            required
+            onChange={(e) => setValues({ ...values, phone: e.target.value })}
+            placeholder="+33123456789"
           />
         </div>
 
@@ -109,8 +133,8 @@ function FormStudent() {
             onChange={(e) => setValues({ ...values, gender: e.target.value })}
             required
           >
-            <option value="">Select gender</option>{" "}
-            {/* Option vide pour le placeholder */}
+            <option value="">Select gender</option>
+
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>

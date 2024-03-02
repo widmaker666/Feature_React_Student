@@ -2,84 +2,103 @@
   "students": [
     {
       "id": "1",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "John",
-      "lastName": "Doe",
-      "dateOfBirth": "1990-05-15",
-      "gender": "male"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Neo",
+      "lastName": "Anderson",
+      "dateOfBirth": "1980-09-02",
+      "gender": "male",
+      "email": "neo.anderson@example.com",
+      "phone": "+1234567890"
     },
     {
       "id": "2",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Alice",
-      "lastName": "Smith",
-      "dateOfBirth": "1992-08-20",
-      "gender": "female"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Leia",
+      "lastName": "Organa",
+      "dateOfBirth": "1977-05-25",
+      "gender": "female",
+      "email": "leia.organa@example.com",
+      "phone": "+1987654321"
     },
     {
       "id": "3",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Bob",
-      "lastName": "Johnson",
-      "dateOfBirth": "1991-03-10",
-      "gender": "male"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "dateOfBirth": "1977-05-25",
+      "gender": "male",
+      "email": "luke.skywalker@example.com",
+      "phone": "+1555123456"
     },
     {
       "id": "4",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Emily",
-      "lastName": "Brown",
-      "dateOfBirth": "1993-12-05",
-      "gender": "female"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Sarah",
+      "lastName": "Connor",
+      "dateOfBirth": "1965-01-01",
+      "gender": "female",
+      "email": "sarah.connor@example.com",
+      "phone": "+1432123456"
     },
     {
       "id": "5",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Michael",
-      "lastName": "Wilson",
-      "dateOfBirth": "1989-09-25",
-      "gender": "male"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Marty",
+      "lastName": "McFly",
+      "dateOfBirth": "1968-06-12",
+      "gender": "male",
+      "email": "marty.mcfly@example.com",
+      "phone": "+1555123456"
     },
     {
       "id": "6",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Emma",
-      "lastName": "Taylor",
-      "dateOfBirth": "1994-04-18",
-      "gender": "female"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Ellen",
+      "lastName": "Ripley",
+      "dateOfBirth": "2092-02-07",
+      "gender": "female",
+      "email": "ellen.ripley@example.com",
+      "phone": "+1123456789"
     },
     {
       "id": "7",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "James",
-      "lastName": "Martinez",
-      "dateOfBirth": "1995-11-30",
-      "gender": "male"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Arthur",
+      "lastName": "Dent",
+      "dateOfBirth": "2066-03-11",
+      "gender": "male",
+      "email": "arthur.dent@example.com",
+      "phone": "+1123456789"
     },
     {
       "id": "8",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Olivia",
-      "lastName": "Hernandez",
-      "dateOfBirth": "1990-07-12",
-      "gender": "female"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Princess",
+      "lastName": "Leia",
+      "dateOfBirth": "1981-04-21",
+      "gender": "female",
+      "email": "princess.leia@example.com",
+      "phone": "+1123456789"
     },
     {
       "id": "9",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "William",
-      "lastName": "Young",
-      "dateOfBirth": "1993-01-22",
-      "gender": "male"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Hal",
+      "lastName": "9000",
+      "dateOfBirth": "1997-01-12",
+      "gender": "male",
+      "email": "hal.9000@example.com",
+      "phone": "+1123456789"
     },
     {
       "id": "10",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2G3Lb8ot6gegxYDx3SoXiQzxWW7TGBwl_Aw&usqp=CAU",
-      "firstName": "Sophia",
-      "lastName": "Garcia",
-      "dateOfBirth": "1992-06-08",
-      "gender": "female"
+      "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
+      "firstName": "Trinity",
+      "lastName": "Moss",
+      "dateOfBirth": "1996-11-27",
+      "gender": "female",
+      "email": "trinity.moss@example.com",
+      "phone": "+1123456789"
     }
-    
   ]
 }

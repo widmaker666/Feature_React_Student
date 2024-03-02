@@ -86,7 +86,10 @@ input[type="file"]::-webkit-file-upload-button:active {
   & .div-fName,
   .div-lName,
   .div-birth,
-  .div-gender {
+  .div-gender,
+  .div-email,
+  .div-phone
+  {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,7 +109,7 @@ input[type="file"]::-webkit-file-upload-button:active {
       border-radius: 10px;
       height: 30px;
       font-family: $font-paragraph-light;
-      width: auto;
+      width: 250px;
     }
 
     & input:focus {
