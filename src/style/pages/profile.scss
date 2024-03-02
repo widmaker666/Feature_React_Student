@@ -1,0 +1,78 @@
+.profil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .profil-container-img {
+    & img {
+      height: 230px;
+      width: 230px;
+      background: white;
+      border: 3px solid black;
+      border-radius: 20px;
+    }
+  }
+
+  & .profil-content-student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    height: 500px;
+    width: 500px;
+    max-width: 90%;
+    border: 4px solid black;
+    border-radius: 25px;
+    margin: 10px 0;
+
+    & .div-fName,
+    .div-lName,
+    .div-date-birth,
+    .div-gender,
+    .div-email,
+    .div-phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 10px 0;
+      gap: 5px;
+
+      & label {
+        font-family: $font-paragraph-reg;
+        font-weight: 700;
+      }
+
+      & input {
+        color: lightslategray;
+        padding-left: 8px;
+        border: 2.5px solid black;
+        box-shadow: 5px 5px 0px -3px rgba(0, 0, 0, 1);
+        border-radius: 10px;
+        height: 30px;
+        font-family: $font-paragraph-light;
+        width: 250px;
+      }
+
+      & input:focus {
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        color: black;
+        font-weight: 700;
+      }
+    }
+    & p {
+      font-family: $font-paragraph-reg;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  & .profile-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+  }
+}

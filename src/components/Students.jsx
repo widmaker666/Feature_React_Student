@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DisplayStudents from "./DisplayStudents";
-import ReadStudent from "../pages/ReadStudent"; 
+import Profile from "../pages/Profile";
+ 
 
 function Students() {
   const [allStudents, setAllStudents] = useState([]);
@@ -22,7 +23,7 @@ function Students() {
   return (
     <>
       <DisplayStudents allStudents={allStudents} />
-      <ReadStudent allStudents={allStudents} />      
+      <Profile allStudents={allStudents} />      
     </>
   );
 }
