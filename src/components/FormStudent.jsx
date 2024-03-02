@@ -18,6 +18,7 @@ function ImageUploader({ onImageChange }) {
 
 function FormStudent() {
   const [avatar, setAvatar] = useState("");
+  const [selectedImg, setSelectedImg] = useState(false);
   const [values, setValues] = useState({
     id: "",
     photo: "",
@@ -31,6 +32,7 @@ function FormStudent() {
     const imageUrl = URL.createObjectURL(image);
     setAvatar(imageUrl);
     setValues(() => setValues({ ...values, photo: imageUrl }));
+    setSelectedImg(true);
   };
 
   const navigate = useNavigate();
@@ -38,6 +40,11 @@ function FormStudent() {
     e.preventDefault();
 
     const id = uuidv4();
+
+    if (!selectedImg) {
+      alert("Selected a profile image");
+      return;
+    }
 
     await axios
       .post("http://localhost:3001/students", { ...values, id })
@@ -100,7 +107,7 @@ function FormStudent() {
             name="gender"
             id="gender"
             onChange={(e) => setValues({ ...values, gender: e.target.value })}
-            required 
+            required
           >
             <option value="">Select gender</option>{" "}
             {/* Option vide pour le placeholder */}

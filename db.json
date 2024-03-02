@@ -79,54 +79,7 @@
       "lastName": "Garcia",
       "dateOfBirth": "1992-06-08",
       "gender": "female"
-    },
-    {
-      "id": "4bdc",
-      "photo": "http://localhost:3000/9ea2487c-2f8a-4735-a4fe-cae63ae6313e",
-      "firstName": "ALEXANDRE",
-      "lastName": "Hontcharouk",
-      "dateOfBirth": "2024-03-01",
-      "gender": ""
-    },
-    {
-      "id": "1acd",
-      "photo": "http://localhost:3000/507df898-372b-48c4-b9bd-4e45cc19df75",
-      "firstName": "jean",
-      "lastName": "paul",
-      "dateOfBirth": "2024-03-22",
-      "gender": "female"
-    },
-    {
-      "id": "b9a6",
-      "photo": "http://localhost:3000/bde3c7e3-bb30-43d7-8bac-062a23bd2785",
-      "firstName": "ALEXANDRE",
-      "lastName": "widmaker",
-      "dateOfBirth": "2024-03-01",
-      "gender": ""
-    },
-    {
-      "id": "afa6d631-0899-4556-bbbd-5dced36be683",
-      "photo": "",
-      "firstName": "ALEXANDRE",
-      "lastName": "Rousseau",
-      "dateOfBirth": "2024-03-10",
-      "gender": "male"
-    },
-    {
-      "id": "0461c577-b329-4bcf-9e05-714dcd0015e3",
-      "photo": "",
-      "firstName": "Alexandre",
-      "lastName": "paul",
-      "dateOfBirth": "2024-03-23",
-      "gender": ""
-    },
-    {
-      "id": "20d6c002-85b9-4efa-94fb-e971a1e469c8",
-      "photo": "",
-      "firstName": "ALEXANDRE",
-      "lastName": "Hontcharouk",
-      "dateOfBirth": "2024-03-08",
-      "gender": ""
     }
+    
   ]
 }
