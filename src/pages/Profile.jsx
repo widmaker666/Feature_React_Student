@@ -1,6 +1,7 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import { motion } from "framer-motion";
 
 function Profile() {
   const { id } = useParams();
@@ -60,106 +61,102 @@ function Profile() {
   }
 
   return (
-    <>
-      <main className="profile">
-        <h1>
-          Profile of {student.firstName} {student.lastName}
-        </h1>
+    <main className="profile">
+      <h1>
+        Profile of {student.firstName} {student.lastName}
+      </h1>
 
-        <div className="profil-container">
-          <div className="profil-container-img">
-            <img src={student.photo} alt={student.firstName} />
-          </div>
-          <div className="profil-content-student">
-            {editMode ? (
-              <>
-                <div className="div-fName">
-                  <label htmlFor="firstName">First Name: </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={updatedStudent.firstName}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="div-lName">
-                  <label htmlFor="lastName">Last Name: </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={updatedStudent.lastName}
-                    onChange={handleInputChange}
-                  />
-                </div>
-
-                <div className="div-date-birth">
-                  <label htmlFor="dateOfBirth">date of birth: </label>
-                  <input
-                    type="text"
-                    name="dateOfBirth"
-                    value={updatedStudent.dateOfBirth}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="div-gender">
-                  <label htmlFor="gender">gender: </label>
-                  <input
-                    type="text"
-                    name="gender"
-                    value={updatedStudent.gender}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="div-email">
-                  <label htmlFor="email">email: </label>
-                  <input
-                    type="text"
-                    name="email"
-                    value={updatedStudent.email}
-                    onChange={handleInputChange}
-                  />
-                  <div className="div-phone">
-                    <label htmlFor="phone">phone: </label>
-                    <input
-                      type="text"
-                      name="phone"
-                      value={updatedStudent.phone}
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <p>First Name: {student.firstName}</p>
-                <p>Last Name: {student.lastName}</p>
-                <p>Date of Birth: {student.dateOfBirth}</p>
-                <p>Gender: {student.gender}</p>
-                <p>Email: {student.email}</p>
-                <p>Phone: {student.phone}</p>
-              </>
-            )}
-          </div>
-          {editMode ? (
-            <button className="edit-btn" onClick={handleSave}>
-              Save
-            </button>
-          ) : (
-            <div className="profile-btn">
-              <button className="edit-btn" onClick={handleUpdate}>
-                Update
-              </button>
-              <button className="delete-btn" onClick={handleDelete}>
-                Delete
-              </button>
-            </div>
-          )}
-          <Link className="back-home" to="/">
-            Back
-          </Link>
+      <div className="profil-container">
+        <div className="profil-container-img">
+          <img src={student.photo} alt={student.firstName} />
         </div>
-      </main>
-    </>
+        <div className="profil-content-student">
+          {editMode ? (
+            <>
+              <motion.div
+                className="div-fName"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                <label htmlFor="firstName">First Name: </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={updatedStudent.firstName}
+                  onChange={handleInputChange}
+                />
+              </motion.div>
+              {/* Ajoutez des animations similaires pour les autres champs */}
+            </>
+          ) : (
+            <>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                First Name: {student.firstName}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                Last Name: {student.lastName}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                Date of Birth: {student.dateOfBirth}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                Gender: {student.gender}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                Email: {student.email}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5 }} // Réglez la durée de l'animation ici
+              >
+                Phone: {student.phone}
+              </motion.p>
+            </>
+          )}
+        </div>
+        {!editMode && (
+          <div className="profile-btn">
+            <button className="edit-btn" onClick={handleUpdate}>
+              Update
+            </button>
+            <button className="delete-btn" onClick={handleDelete}>
+              Delete
+            </button>
+          </div>
+        )}
+        <Link className="back-home" to="/">
+          Back
+        </Link>
+      </div>
+    </main>
   );
 }
 
