@@ -31,3 +31,8 @@ npm install
 npm run server
 
 npm start
+
+![Accueil](/public/assets/img/theme_1.png)
+![Add Student](/public/assets/img/theme_2.png)
+![Profile](/public/assets/img/theme_3.png)
+![Update Profile](/public/assets/img/theme_4.png)
