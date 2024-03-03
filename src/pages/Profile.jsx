@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
+import SendMessageToStudent from "../components/SendMessageToStudent";
 
 function Profile() {
+  // !Constantes //
   const { id } = useParams();
   const navigate = useNavigate();
   const [student, setStudent] = useState(null);
@@ -27,8 +29,10 @@ function Profile() {
     fetchStudent();
   }, [id]);
 
+  //! Function handle //
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
     setUpdatedStudent({ ...updatedStudent, [name]: value });
   };
 
@@ -190,7 +194,7 @@ function Profile() {
           </div>
           {editMode ? (
             <motion.button
-              className="edit-btn"
+              className="save-btn"
               onClick={handleSave}
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -200,9 +204,10 @@ function Profile() {
             </motion.button>
           ) : (
             <div className="profile-btn">
-              <button className="edit-btn" onClick={handleUpdate}>
+              <button className="update-btn" onClick={handleUpdate}>
                 Update
               </button>
+              <SendMessageToStudent studentEmail={student.email} />
               <button className="delete-btn" onClick={handleDelete}>
                 Delete
               </button>

@@ -6,9 +6,14 @@
 
 //* COMPONENTS //
 @import "./style/components/displayStudents.scss";
-@import "./style/components/editBtn.scss";
-@import "./style/components/deleteBtn.scss";
-@import "./style/components/createBtn.scss";
 @import "./style/components/formStudent.scss";
-@import "./style/components/readBtn.scss"
 
+//* Utils //
+@import "./style/utils/editBtn.scss";
+@import "./style/utils/deleteBtn.scss";
+@import "./style/utils/createBtn.scss";
+@import "./style/utils/readBtn.scss";
+@import "./style/utils/emailBtn.scss";
+@import "./style/utils/emailBtn.scss";
+@import "./style/utils/updateBtn.scss";
+@import "./style/utils/saveBtn.scss";

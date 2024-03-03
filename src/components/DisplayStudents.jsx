@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CreateBtn from "../utils/CreateBtn";
 
 function DisplayStudents({ allStudents }) {
+  //! Constantes //
   const [sortBy, setSortBy] = useState(null);
   const [numToShow, setNumToShow] = useState(5);
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,6 +14,7 @@ function DisplayStudents({ allStudents }) {
     gender: false,
   });
 
+  //! Fonction Handle //
   const handleSort = (field) => {
     if (sortBy === field) {
       setSortBy(null);
@@ -40,12 +42,13 @@ function DisplayStudents({ allStudents }) {
     }
   };
 
-  const getSortClass = (field) => {
-    return sortStates[field] ? "sorted" : "";
-  };
-
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
+  };
+
+  //! Fonction //
+  const getSortClass = (field) => {
+    return sortStates[field] ? "sorted" : "";
   };
 
   const filteredStudents = allStudents.filter((student) => {

@@ -5,7 +5,7 @@
       "photo": "https://i.pinimg.com/originals/e5/85/7e/e5857ef6157b5613393b20b0c52e3b49.png",
       "firstName": "Neo",
       "lastName": "Anderson",
-      "dateOfBirth": "1980-09-02",
+      "dateOfBirth": "1980-10-22",
       "gender": "male",
       "email": "neo.anderson@example.com",
       "phone": "+1234567890"
@@ -27,7 +27,7 @@
       "lastName": "Skywalker",
       "dateOfBirth": "1977-05-25",
       "gender": "male",
-      "email": "luke.skywalker@example.com",
+      "email": "luke.skywalker@example.fr",
       "phone": "+1555123456"
     },
     {

@@ -3,21 +3,13 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
-
-function ImageUploader({ onImageChange }) {
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    onImageChange(file);
-  };
-
-  return (
-    <div>
-      <input type="file" onChange={handleImageChange} accept="image/*" />
-    </div>
-  );
-}
+import { ImageUploader } from "./ImageUploader";
 
 function FormStudent() {
+  //! Constantes //
+  const navigate = useNavigate();
+  const id = uuidv4();
+
   const [avatar, setAvatar] = useState("");
   const [selectedImg, setSelectedImg] = useState(false);
   const [values, setValues] = useState({
@@ -31,6 +23,7 @@ function FormStudent() {
     phone: "",
   });
 
+  //!Function Handle //
   const handleAvatarChange = (image) => {
     const imageUrl = URL.createObjectURL(image);
     setAvatar(imageUrl);
@@ -38,12 +31,8 @@ function FormStudent() {
     setSelectedImg(true);
   };
 
-  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const id = uuidv4();
-
     if (!selectedImg) {
       alert("Selected a profile image");
       return;
@@ -58,6 +47,7 @@ function FormStudent() {
       .catch((err) => console.log(err));
   };
 
+  //! Framer motion //
   const variants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
