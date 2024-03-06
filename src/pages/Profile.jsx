@@ -4,6 +4,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import SendMessageToStudent from "../components/SendMessageToStudent";
 import loader from "../assets/gif/loader1.gif";
+import { isValidUpdate } from "../utils/IsValidUpdate";
 
 function Profile() {
   // !Constantes //
@@ -51,56 +52,18 @@ function Profile() {
       "Are you sure you want to save changes?"
     );
 
-    if (!/^[a-zA-Z-]+$/.test(updatedStudent.firstName.trim())) {
-      alert(
-        "Please enter a valid first name (only alphabetic characters and hyphens are allowed)"
-      );
-      return;
-    }
-
-    if (!/^[a-zA-Z-]+$/.test(updatedStudent.lastName.trim())) {
-      alert(
-        "Please enter a valid last name (only alphabetic characters and hyphens are allowed)"
-      );
-      return;
-    }
-
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(updatedStudent.dateOfBirth.trim())) {
-      alert("Please enter a valid date of birth (YYYY-MM-DD)");
-      return;
-    }
-
-    if (
-      updatedStudent.gender !== "male" ||
-      (updatedStudent.gender !== "female" &&
-        !/^[a-zA-Z-]+$/.test(updatedStudent.gender.trim()))
-    ) {
-      alert("Please enter a valide gender (male or female)");
-      return;
-    }
-
-    if (!/^\d+$/.test(updatedStudent.phone.trim())) {
-      alert(
-        "Please enter a valid phone number (only numeric characters are allowed)"
-      );
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(updatedStudent.email.trim())) {
-      alert("Please enter a valid email");
-      return;
-    }
-
     if (!confirmSave) return;
 
-    try {
-      await axios.put(`http://localhost:3001/students/${id}`, updatedStudent);
-      setStudent(updatedStudent);
-      setEditMode(false);
-      alert("Profil updated successfully");
-    } catch (error) {
-      console.error("error updating student", error);
-      alert("An error occurred while updating the profile.");
+    if (isValidUpdate(updatedStudent)) {
+      try {
+        await axios.put(`http://localhost:3001/students/${id}`, updatedStudent);
+        setStudent(updatedStudent);
+        setEditMode(false);
+        alert("Profil updated successfully");
+      } catch (error) {
+        console.error("error updating student", error);
+        alert("An error occurred while updating the profile.");
+      }
     }
   };
 

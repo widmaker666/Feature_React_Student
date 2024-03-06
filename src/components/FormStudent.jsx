@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 import { ImageUploader } from "./ImageUploader";
+import { isValidFormStudent } from "../utils/IsValidForm";
 
 function FormStudent() {
   //! Constantes //
@@ -38,39 +39,18 @@ function FormStudent() {
       return;
     }
 
-    if (!/^[a-zA-Z-]+$/.test(values.firstName.trim())) {
-      alert(
-        "Please enter a valid first name (only alphabetic characters and hyphens are allowed)"
-      );
-      return;
+    if (isValidFormStudent(values)) {
+      await axios
+        .post("http://localhost:3001/students", { ...values, id })
+        .then((res) => {
+          alert("Profile created successfully");
+          navigate("/");
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Profile created failed");
+        });
     }
-    if (!/^[a-zA-Z-]+$/.test(values.lastName.trim())) {
-      alert(
-        "Please enter a valid last name (only alphabetic characters and hyphens are allowed)"
-      );
-      return;
-    }
-    if (!/^\d+$/.test(values.phone.trim())) {
-      alert(
-        "Please enter a valid phone number (only numeric characters are allowed)"
-      );
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
-      alert("Please enter a valid email");
-      return;
-    }
-
-    await axios
-      .post("http://localhost:3001/students", { ...values, id })
-      .then((res) => {
-        alert("Profile created successfully");
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Profile created failed");
-      });
   };
 
   //! Framer motion //
