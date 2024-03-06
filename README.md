@@ -12,7 +12,7 @@ Ce projet est une application web de gestion des étudiants, construite avec Rea
 
 ## Style Dynamique avec SCSS et Animations Fluides avec Framer Motion
 
-L'esthétique de notre application est méticuleusement conçue pour offrir une expérience visuelle immersive. En utilisant SCSS, nous avons créé un système de styles dynamique qui permet une personnalisation facile et une maintenance simplifiée. Les animations fluides sont intégrées avec Framer Motion, ajoutant une touche de vie et d'interactivité à chaque interaction. Mon design graphique est caractérisé par des éléments colorés et audacieux, captivant l'attention de l'utilisateur tout en offrant une expérience esthétique et plaisante.
+L'esthétique de notre application est méticuleusement conçue pour offrir une expérience visuelle immersive. En utilisant SCSS, j'ai créé un système de styles dynamique qui permet une personnalisation facile et une maintenance simplifiée. Les animations fluides sont intégrées avec Framer Motion, ajoutant une touche de vie et d'interactivité à chaque interaction. Mon design graphique est caractérisé par des éléments colorés et audacieux, captivant l'attention de l'utilisateur tout en offrant une expérience esthétique et plaisante.
 
 ## Technologies Utilisées
 
