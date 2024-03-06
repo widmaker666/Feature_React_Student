@@ -51,7 +51,48 @@ function Profile() {
       "Are you sure you want to save changes?"
     );
 
+    if (!/^[a-zA-Z-]+$/.test(updatedStudent.firstName.trim())) {
+      alert(
+        "Please enter a valid first name (only alphabetic characters and hyphens are allowed)"
+      );
+      return;
+    }
+
+    if (!/^[a-zA-Z-]+$/.test(updatedStudent.lastName.trim())) {
+      alert(
+        "Please enter a valid last name (only alphabetic characters and hyphens are allowed)"
+      );
+      return;
+    }
+
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(updatedStudent.dateOfBirth.trim())) {
+      alert("Please enter a valid date of birth (YYYY-MM-DD)");
+      return;
+    }
+
+    if (
+      updatedStudent.gender !== "male" ||
+      (updatedStudent.gender !== "female" &&
+        !/^[a-zA-Z-]+$/.test(updatedStudent.gender.trim()))
+    ) {
+      alert("Please enter a valide gender (male or female)");
+      return;
+    }
+
+    if (!/^\d+$/.test(updatedStudent.phone.trim())) {
+      alert(
+        "Please enter a valid phone number (only numeric characters are allowed)"
+      );
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(updatedStudent.email.trim())) {
+      alert("Please enter a valid email");
+      return;
+    }
+
     if (!confirmSave) return;
+
     try {
       await axios.put(`http://localhost:3001/students/${id}`, updatedStudent);
       setStudent(updatedStudent);
