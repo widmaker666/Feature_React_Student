@@ -33,13 +33,17 @@ npm run server
 npm start
 
 ## Page d'accueil
-![Accueil](/public/assets/img/theme_1.png)
+
+![Accueil](./src/assets/img/theme_1.png)
 
 ## Page de création d'un élève
-![Add Student](/public/assets/img/theme_2.png)
+
+![Add Student](./src/assets/img/theme_2.png)
 
 ## Page du profil
-![Profile](/public/assets/img/theme_3.png)
+
+![Profile](./src/assets/img/theme_3.png)
 
 ## Page de modification du profil
-![Update Profile](/public/assets/img/theme_4.png)
+
+![Update Profile](./src/assets/img/theme_4.png)
