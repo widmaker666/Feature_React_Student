@@ -3,11 +3,12 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
 import SendMessageToStudent from "../components/SendMessageToStudent";
+import loader from "../assets/gif/loader1.gif"
 
 function Profile() {
   // !Constantes //
   const { id } = useParams();
-  console.log(id);
+
   const navigate = useNavigate();
   const [student, setStudent] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -20,8 +21,11 @@ function Profile() {
         const response = await axios.get(
           `http://localhost:3001/students/${id}`
         );
-        setStudent(response.data);
-        setLoading(false);
+        
+        setTimeout(() => {
+          setStudent(response.data);
+          setLoading(false);
+        }, 350); 
       } catch (error) {
         console.error("error fetching student");
         setLoading(false);
@@ -62,7 +66,7 @@ function Profile() {
   };
 
   if (loading || !student) {
-    return <div className="loading-spin">Loading...</div>;
+    return <img className="loader" src={loader} alt=""/>
   }
 
   return (
