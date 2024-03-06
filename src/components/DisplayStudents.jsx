@@ -16,19 +16,14 @@ function DisplayStudents({ allStudents }) {
 
   //! Fonction Handle //
   const handleSort = (field) => {
-    if (sortBy === field) {
-      setSortBy(null);
-      setSortStates((prevState) => ({
-        ...prevState,
-        [field]: false,
-      }));
-    } else {
-      setSortBy(field);
-      setSortStates((prevState) => ({
-        ...prevState,
-        [field]: true,
-      }));
-    }
+    setSortBy((prevSortBy) => {
+      return prevSortBy === field ? null : field;
+    });
+
+    setSortStates((prevState) => ({
+      ...prevState,
+      [field]: prevState[field] ? false : true,
+    }));
   };
 
   const handleShowMore = () => {
