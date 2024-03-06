@@ -11,7 +11,7 @@ function Students() {
         const response = await axios.get("http://localhost:3001/students");
         setAllStudents(response.data);
       } catch (error) {
-        console.error("error fetch students");
+        console.error("error fetch students", error);
       }
     };
     fetchStudents();

@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
 import SendMessageToStudent from "../components/SendMessageToStudent";
-import loader from "../assets/gif/loader1.gif"
+import loader from "../assets/gif/loader1.gif";
 
 function Profile() {
   // !Constantes //
@@ -21,11 +21,11 @@ function Profile() {
         const response = await axios.get(
           `http://localhost:3001/students/${id}`
         );
-        
+
         setTimeout(() => {
           setStudent(response.data);
           setLoading(false);
-        }, 350); 
+        }, 350);
       } catch (error) {
         console.error("error fetching student");
         setLoading(false);
@@ -47,26 +47,38 @@ function Profile() {
   };
 
   const handleSave = async () => {
+    const confirmSave = window.confirm(
+      "Are you sure you want to save changes?"
+    );
+
+    if (!confirmSave) return;
     try {
       await axios.put(`http://localhost:3001/students/${id}`, updatedStudent);
       setStudent(updatedStudent);
       setEditMode(false);
+      alert("Profil updated successfully");
     } catch (error) {
       console.error("error updating student", error);
+      alert("An error occurred while updating the profile.");
     }
   };
 
   const handleDelete = async () => {
+    const confirmDelete = window.confirm("Are you sure you want to delete ?");
+
+    if (!confirmDelete) return;
     try {
       await axios.delete(`http://localhost:3001/students/${id}`);
+      alert("Profile deleted successfully!");
       navigate("/");
     } catch (error) {
       console.error("error deleting student", error);
+      alert("Profile deleted error!");
     }
   };
 
   if (loading || !student) {
-    return <img className="loader" src={loader} alt=""/>
+    return <img className="loader" src={loader} alt="" />;
   }
 
   return (
@@ -98,6 +110,7 @@ function Profile() {
                 <input
                   type="text"
                   name="firstName"
+                  maxLength={50}
                   value={updatedStudent.firstName}
                   onChange={handleInputChange}
                 />
@@ -107,6 +120,7 @@ function Profile() {
                 <input
                   type="text"
                   name="lastName"
+                  maxLength={50}
                   value={updatedStudent.lastName}
                   onChange={handleInputChange}
                 />
@@ -135,6 +149,7 @@ function Profile() {
                 <input
                   type="text"
                   name="email"
+                  maxLength={100}
                   value={updatedStudent.email}
                   onChange={handleInputChange}
                 />
@@ -143,6 +158,7 @@ function Profile() {
                   <input
                     type="text"
                     name="phone"
+                    maxLength={20}
                     value={updatedStudent.phone}
                     onChange={handleInputChange}
                   />

@@ -41,10 +41,14 @@ function FormStudent() {
     await axios
       .post("http://localhost:3001/students", { ...values, id })
       .then((res) => {
-        console.log(res);
+        alert("Profile created successfully")        
         navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {        
+        console.log(err);
+        alert("Profile created failed"); 
+      })
+      
   };
 
   //! Framer motion //
@@ -81,6 +85,7 @@ function FormStudent() {
           <input
             type="text"
             id="firstName"
+            maxLength={50}
             required
             onChange={(e) =>
               setValues({ ...values, firstName: e.target.value })
@@ -99,6 +104,7 @@ function FormStudent() {
           <input
             type="text"
             id="lastName"
+            maxLength={50}
             required
             onChange={(e) => setValues({ ...values, lastName: e.target.value })}
             placeholder="Krueger...."
@@ -115,6 +121,7 @@ function FormStudent() {
           <input
             type="text"
             id="email"
+            maxLength={100}
             required
             onChange={(e) => setValues({ ...values, email: e.target.value })}
             placeholder="freddy.krueger@gmail.com"
@@ -131,6 +138,7 @@ function FormStudent() {
           <input
             type="text"
             id="phone"
+            maxLength={20}
             required
             onChange={(e) => setValues({ ...values, phone: e.target.value })}
             placeholder="+33123456789"

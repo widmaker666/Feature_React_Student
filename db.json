@@ -99,6 +99,26 @@
       "gender": "female",
       "email": "trinity.moss@example.com",
       "phone": "+1123456789"
+    },
+    {
+      "id": "7a9593d5-c167-48a3-b70b-704ac960e71c",
+      "photo": "blob:http://localhost:3000/91bc58bf-2a25-44f2-a27e-4ec9e01e7032",
+      "firstName": "Alexandre",
+      "lastName": "Rousseau",
+      "dateOfBirth": "2024-03-08",
+      "gender": "female",
+      "email": "alexandre.hontcharouk69@gmail.com",
+      "phone": "3223232323"
+    },
+    {
+      "id": "37efb07f-c451-4407-8762-b9c28d95f50a",
+      "photo": "blob:http://localhost:3000/6755db5a-d6b5-4959-88e8-67a62f667f4e",
+      "firstName": "jeanpaul",
+      "lastName": "Hontcharouk",
+      "dateOfBirth": "2024-03-15",
+      "gender": "male",
+      "email": "alexandre.hontcharouk69@gmail.com",
+      "phone": "+33 6 33 03 87 88"
     }
   ]
 }

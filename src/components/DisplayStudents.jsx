@@ -70,6 +70,7 @@ function DisplayStudents({ allStudents }) {
         <input
           id="search"
           type="text"
+          maxLength={50}
           value={searchTerm}
           onChange={handleSearchChange}
           placeholder="Search by name..."
