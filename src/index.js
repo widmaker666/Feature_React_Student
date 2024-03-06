@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./PanelAdmin";
 import CreateStudent from "./pages/CreateStudent";
 import Profile from "./pages/Profile";
+import UpdateProfile from "./pages/UpdateProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/create-student" element={<CreateStudent />} />
       <Route path="/student/:id" element={<Profile />} />
+      <Route path="/student/update/:id" element={<UpdateProfile />} />
     </Routes>
   </BrowserRouter>
 );

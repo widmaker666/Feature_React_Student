@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DisplayStudents from "./DisplayStudents";
-import Profile from "../pages/Profile";
- 
 
 function Students() {
   const [allStudents, setAllStudents] = useState([]);
@@ -12,7 +10,6 @@ function Students() {
       try {
         const response = await axios.get("http://localhost:3001/students");
         setAllStudents(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error("error fetch students");
       }
@@ -21,10 +18,7 @@ function Students() {
   }, []);
 
   return (
-    <>
-      <DisplayStudents allStudents={allStudents} />
-      <Profile allStudents={allStudents} />      
-    </>
+    <DisplayStudents allStudents={allStudents} />
   );
 }
 

@@ -1,15 +1,15 @@
 //* Fonts //
 @font-face {
   font-family: "title";
-  src: url("../../public/assets/fonts/Ojuju-Regular.ttf");
+  src: url("../assets/fonts/Ojuju-Medium.ttf");
 }
 @font-face {
   font-family: "paragraph-reg";
-  src: url("../../public/assets/fonts/Nunito-Regular.ttf");
+  src: url("../assets/fonts/Nunito-Medium.ttf");
 }
 @font-face {
   font-family: "paragraph-light";
-  src: url("../../public/assets/fonts/Nunito-Light.ttf");
+  src: url("../assets/fonts/Nunito-Medium.ttf");
 }
 
 $font-title: "title";
@@ -32,10 +32,10 @@ html {
 body {
   user-select: none;
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-  height: 100vh;  
+  height: 100vh;
   overflow-x: hidden;
 }
 
 .loading-spin {
-  color: transparent;
+  color: red;
 }
